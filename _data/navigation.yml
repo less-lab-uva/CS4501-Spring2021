@@ -1,0 +1,7 @@
+- name: Lectures
+  link: /#
+  dropdown:
+- name: Labs
+  link: /#
+- name: Project
+  link: /#

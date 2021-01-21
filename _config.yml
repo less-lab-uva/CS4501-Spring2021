@@ -1,0 +1,58 @@
+# Site Settings
+title: CS4501
+tagline: CS4501
+email: selbaum@virginia.edu
+description: UVA's Robotics for Software Engineers undergraduate course.
+baseurl: "/CS4501-Website"
+url: https://less-lab-uva.github.io
+repository: "CS4501-Website"
+permalink: pretty
+favicon: /favicon.ico
+contact: /contact
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+  - kramdown-parser-gfm
+
+exclude: 
+  - Gemfile
+  - clean-theme.gemspec
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+livereload: true
+
+sass:
+  style: compressed
+  source_dir: _sass
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      show_sidebar: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "LESS Lab"
+      layout: post
+      image: https://via.placeholder.com/1200x800
+
+collections:
+  products: 
+    output: true
+    layout: product
+    image: https://via.placeholder.com/800x600

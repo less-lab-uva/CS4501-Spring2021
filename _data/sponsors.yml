@@ -1,0 +1,17 @@
+- tier_name: Current 
+  size: large
+  description: |-
+  sponsors:
+    - name: Sebastian Elbaum
+      profile: https://github.com/
+    - name: Trey Woodlief
+      profile: https://github.com/
+    - name: Carl Hildebrandt
+      profile: https://github.com/
+- tier_name: Previous
+  size: small
+  description: |- 
+    This class was made possible though the hard work of current and previous.
+  sponsors:
+    - name: Ana Nora Evans
+      profile: https://github.com/
