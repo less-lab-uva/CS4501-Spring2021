@@ -8,7 +8,7 @@ url: https://less-lab-uva.github.io
 repository: "CS4501-Website"
 permalink: pretty
 favicon: /favicon.ico
-contact: /contact
+team: /team
 markdown: kramdown
 highlighter: rouge
 
