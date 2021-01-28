@@ -14,6 +14,7 @@ icon="false" %}
 
 * Sebastian Elbaum - Instructor, selbaum at virginia  
 * Trey Woodlief - Teaching Assistant, adw8dm at virginia 
+* Meriel Stein - Teaching Assistant, meriel at virginia
 * Carl Hildebrandt  - Leads Labs, ch6wd at virginia 
 
 # Goal and Scope
@@ -26,6 +27,7 @@ Developing software for robot systems is challenging as they must sense, actuate
 
 # Office Hours
 * Trey Woodlief: Mondays 9AM-11AM 
+* Meriel Stein: Thursdays 9AM-11AM
 * Sebastian Elbaum:  Friday 10AM-11AM or by email request
 
 # Prerequisites
