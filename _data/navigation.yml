@@ -1,6 +1,12 @@
 - name: Lectures
   link: /#
+  dropdown:
+    - name: 1 - Introduction
+      link: /lectures/lecture1/ 
 - name: Labs
   link: /#
+  dropdown:
+    - name: 1 - Set up and Basic ROS
+      link: /labs/lab1/
 - name: Project
-  link: /#
+  link: /project/project/
