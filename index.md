@@ -44,9 +44,9 @@ CS 4414 (Operating Systems)  or advanced software development but with a good un
 |5     |Perception  + Q2                 | Lab-5: Analyzing images               |
 |6     |UVA Break Day                    | Invited Speaker                       |
 |8     |Controlling your robot           | Lab-6: Controlling and testing robots |
-|9     |Making plans    + Q3             | Lab Catch up                          |
-|10    |Localization and navigation      | Lab-7:Mapping and Motion Planning     |
-|11    |Transformations                  | Lab-8:Transformations                 |
+|9     |Making plans    + Q3             | Lab-E: Ethics                          |
+|10    |Localization and navigation      | Lab-7: Mapping and Motion Planning     |
+|11    |Transformations                  | Lab-8: Transformations                 |
 |12    |Advanced Robotics + Q4           | UVA Break Day                         |
 |13    |Project parameters               | Project consult                       |
 |14    |Project check                    | Project consult                       |

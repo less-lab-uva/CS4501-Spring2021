@@ -1,0 +1,22 @@
+# Apple files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Website
+*.gem
+.bundle
+.sass-cache
+_site
+Gemfile.lock
+.idea
+
+# ROS
+devel/
+logs/
+build/
+.catkin_tools/
+
+# Files to ignore
+*.pyc
+.DS_Store
