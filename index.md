@@ -27,6 +27,7 @@ Developing software for robot systems is challenging as they must sense, actuate
 
 # Office Hours
 * Trey Woodlief: Mondays 9AM-11AM 
+* Meriel Stein: Thursdays 9AM-11AM
 * Sebastian Elbaum:  Friday 10AM-11AM or by email request
 
 # Prerequisites
