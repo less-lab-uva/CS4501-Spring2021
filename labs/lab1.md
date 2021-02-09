@@ -110,6 +110,11 @@ To install guest additions, with the virtual machine open, do the following:
 2. A prompt will open in your virtual machine. Click `Run`
 3. Reboot the machine when it is done.
 
+{% include notification.html
+message="We have noticed that for certain machines, especially machines with high resolution screens, your virtual machine still might lag. Reducing the VM's resolution helps things to run faster since it has to render fewer pixels. First change Ubuntu's resolution by going to ``Settings->Devices->Displays->Resolution``, and changing it to something like (1024 X 768). You can then get Virtual Box to scale up the window to look bigger while keeping the lower internal resolution. While the virtual machine is running, up at the top left click ``View->Virtual Screen 1``. In that dropdown select one of the percentages."
+icon="false"
+status="is-success" %}
+
 ## Test your Virtual Machine:
 
 <p> </p>
@@ -476,7 +481,7 @@ We are going to send (publish) messages on that communication channel (topic) an
     </div>
     <div class="column is-6">
         <figure class="image is-4by3">
-            <img src="../images/lab1/graph2.png">
+            <img src="../images/lab1/graph3.png">
         </figure>
         <p class='has-text-centered' markdown="1">Second: Open the message using the side arrows. Then select the checkmark. Selecting the checkmark sends messages.</p>
     </div>

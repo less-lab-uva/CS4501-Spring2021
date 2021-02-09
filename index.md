@@ -17,6 +17,7 @@ icon="false" %}
 * Meriel Stein - Teaching Assistant, meriel at virginia
 * Carl Hildebrandt  - Leads Labs, hildebrandt.carl at virginia 
 
+
 # Goal and Scope
 
 Developing software for robot systems is challenging as they must sense, actuate, and represent the physical world. Sensing the physical world is usually noisy,  actuating in and on the world is often inaccurate, and the knowledge and representation of the world is  incomplete and uncertain.  In this class we will explore software engineering approaches to cope with those challenges. You will learn to use domain-specific abstractions, architectures, libraries, and validation approaches and tools to safely perform robot activities like motion, navigation, perception, planning, and interaction.  The expectation is that this course will open up new career options in robotics for our students. 
@@ -39,7 +40,7 @@ CS 4414 (Operating Systems)  or advanced software development but with a good un
 |:-----|:--------------------------------| :-------------------------------------|
 |1     |Introduction                     | Lab-1: Set up and Basic ROS            |
 |2     |Architecture and Patterns        | Lab-2: Publish/Subscribe & simulation |
-|3     |Software Machinery  + Q1         | Lab-3: Types, libraries, and launches  |
+|3     |Software Machinery  + Q1         | Lab-3: Types and machines             |
 |4     |Robot and world through sensors  | Lab-4: Sensor filtering and fusion    |
 |5     |Perception  + Q2                 | Lab-5: Analyzing images               |
 |6     |UVA Break Day                    | Invited Speaker                       |
