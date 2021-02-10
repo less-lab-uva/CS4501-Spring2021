@@ -39,7 +39,7 @@ CS 4414 (Operating Systems)  or advanced software development but with a good un
 | Week | Topic                           | Lab                                   |
 |:-----|:--------------------------------| :-------------------------------------|
 |1     |Introduction                     | Lab-1: Set up and Basic ROS            |
-|2     |Architecture and Patterns        | Lab-2: Publish/Subscribe & simulation |
+|2     |Distinguishing Development Features        | Lab-2: Publish/Subscribe & simulation |
 |3     |Software Machinery  + Q1         | Lab-3: Types and machines             |
 |4     |Robot and world through sensors  | Lab-4: Sensor filtering and fusion    |
 |5     |Perception  + Q2                 | Lab-5: Analyzing images               |
