@@ -443,18 +443,18 @@ We will be using a custom lightweight quadrotor simulator to learn key robot dev
 Before we launch the simulator, we need to build the workspace that contains the simulator. To build the simulator, run the following in your terminal:
 
 ```
-$ cd ~/lab2_ws/lab2_p2_ws
+$ cd ~/Desktop/CS4501-Labs/lab2_ws/lab2_p2_ws
 $ catkin build
 ```
 
 If everything builds successfully, you can launch the simulator by running the following command. 
 
 ```
-$ source ~/lab2_ws/lab2_p2_ws/devel/setup.bash
+$ source ~/Desktop/CS4501-Labs/lab2_ws/lab2_p2_ws/devel/setup.bash
 $ roslaunch flightcontroller fly.launch
 ```
 
-You will notice we use a launch file to run the simulator. By now, you should start to understand how important launch files are. Take a minute and look at the launch file and try to determine what nodes are being launched. The launch file is located in `~/lab2_ws/lab2_p2_ws/src/flightcontroller/fly.launch`.
+You will notice we use a launch file to run the simulator. By now, you should start to understand how important launch files are. Take a minute and look at the launch file and try to determine what nodes are being launched. The launch file is located in `~/Desktop/CS4501-Labs/lab2_ws/lab2_p2_ws/src/flightcontroller/fly.launch`.
 
 Once it is launched, you will see something like the image below. The green dot represents the center of the drone, while the blue and red lines represent the arms of a drone. 
 
@@ -475,7 +475,7 @@ status="is-success" %}
 
 ## Trouble?
 
-There is a chance that instead of taking off and hovering, your drone might  fly off the screen. This is often because your virtual machine is unable to compute the drone control commands at the set frequency. You can imagine it as you trying to fly a drone but instead of giving it a command every 0.5s, you can only update the command every 5s. We have developed a workaround if you are running into this problem. Inside the drone configuration file, we have added a `clockscale` parameter. Currently, it is set to 1, i.e., everything is computed in real-time. By lowering it, you are slowing down the simulator's world time, i.e. running everything in slow motion and giving your virtual machine more time to compute the commands the drone requires to fly. If your drone is flying off the screen or looks unsteady, try lowering this value in increments of 0.1 until you find a workable solution. You can find the file at `~/lab2_ws/lab2_p2_ws/src/flightgoggles/flightgoggles/config/drone/drone.yaml`
+There is a chance that instead of taking off and hovering, your drone might  fly off the screen. This is often because your virtual machine is unable to compute the drone control commands at the set frequency. You can imagine it as you trying to fly a drone but instead of giving it a command every 0.5s, you can only update the command every 5s. We have developed a workaround if you are running into this problem. Inside the drone configuration file, we have added a `clockscale` parameter. Currently, it is set to 1, i.e., everything is computed in real-time. By lowering it, you are slowing down the simulator's world time, i.e. running everything in slow motion and giving your virtual machine more time to compute the commands the drone requires to fly. If your drone is flying off the screen or looks unsteady, try lowering this value in increments of 0.1 until you find a workable solution. You can find the file at `~/Desktop/CS4501-Labs/lab2_ws/lab2_p2_ws/src/flightgoggles/flightgoggles/config/drone/drone.yaml`
 
 ```yaml
 flightgoggles_uav_dynamics:
@@ -497,7 +497,7 @@ flightgoggles_uav_dynamics:
 Now let's try and fly the drone. We will be using a very similar process to that of Lab 1. In Lab 1 the rocket engine had a node that subscribed to the ``cmd_vel`` topic and to fly the rocket we published commands to ``cmd_vel``. We are going to do exactly that here. Let's see what topics are currently available. Open a terminal and list the available commands as per the list of topics:
 
 ```bash
-$ source ~/lab2_ws/lab2_p2_ws/devel/setup.bash
+$ source ~/Desktop/CS4501-Labs/lab2_ws/lab2_p2_ws/devel/setup.bash
 $ rostopic list
 >>> ...
 >>> /uav/armed
@@ -544,7 +544,7 @@ $ catkin build
 Earlier, we learned that the quadrotor could be controlled using the `/uav/input/position` topic. Next, let's add the keyboard package to this workspace. Clone the keyboard node into this workspace. Once this is done, our next task will be to revise the keyboard manager node to take the keyboard arrow keys and fly the drone. We start by creating a new `simple_control` package:
 
 ```bash
-$ cd ~/lab2_ws/lab2_p2_ws/src
+$ cd ~/Desktop/CS4501-Labs/lab2_ws/lab2_p2_ws/src
 $ catkin_create_pkg simple_control std_msgs rospy geometry_msgs
 ```
 
