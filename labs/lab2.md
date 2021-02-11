@@ -150,7 +150,7 @@ The keyboard manager's job will be to take the information provided by the keybo
 # Create the keyboard-to-abort manager node
 $ touch ~/Desktop/CS4501-Labs/lab2_ws/lab2_p1_ws/src/rocketship/src/keyboard_manager.py
 # Give the keyboard-to-abort manager node execution privileges
-$ chmod u+x ~/Desktop/CS4501-Labs/lab2_ws/lab2_p1_ws/rocketship/src/keyboard_manager.py
+$ chmod u+x ~/Desktop/CS4501-Labs/lab2_ws/lab2_p1_ws/src/rocketship/src/keyboard_manager.py
 ```
 
 Next, we are going to open the node we just created so that we can edit the content. You can open the file in any text editor of your choice. The provided virtual machine has Visual Studio Code installed. To open the file in Visual Studio Code, you can either type this in the terminal or click the blue icon in the menu bar.
