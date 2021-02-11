@@ -36,26 +36,23 @@ CS 4414 (Operating Systems)  or advanced software development but with a good un
 
 # Tentative Schedule
 
-| Week | Topic                           | Lab                                   |
-|:-----|:--------------------------------| :-------------------------------------|
-|1     |Introduction                     | Lab-1: Set up and Basic ROS            |
-|2     |Distinguishing Development Features       | Lab-2: ROS processes, communication, and simulation environment |
-|3     |Software Machinery  + Q1         | Lab-3: Types and machines             |
-|4     |Robot and world through sensors  | Lab-4: Sensor filtering and fusion    |
-|5     |Perception  + Q2                 | Lab-5: Analyzing images               |
-|6     |UVA Break Day                    | Invited Speaker                       |
-|8     |Controlling your robot           | Lab-6: Controlling and testing robots |
-|9     |Making plans    + Q3             | Lab-E: Ethics                          |
-|10    |Localization and navigation      | Lab-7: Mapping and Motion Planning     |
-|11    |Transformations                  | Lab-8: Transformations                 |
-|12    |Advanced Robotics + Q4           | UVA Break Day                         |
-|13    |Project parameters               | Project consult                       |
-|14    |Project check                    | Project consult                       |
-|15    |Project Presentations and Demos  | Taking stock                          |
+| Week | Topic                                  | Lab                                                                   |
+|:-----|:---------------------------------------| :---------------------------------------------------------------------|
+|1     |Introduction                            | Lab-1: Set up and Basic ROS                                           |
+|2     |Distinguishing Development Features     | Lab-2: ROS processes, communication, and simulation environment       |
+|3     |Software Machinery  + Q1                | Lab-3: Types and machines                                             |
+|4     |Robot and world through sensors         | Lab-4: Sensor filtering and fusion                                    |
+|5     |Perception  + Q2                        | Lab-5: Analyzing images                                               |
+|6     |UVA Break Day                           | Invited Speaker                                                       |
+|7     |Controlling your robot                  | Lab-6: Controlling and testing robots                                 |
+|8     |Making plans    + Q3                    | Lab-E: Ethics                                                         |
+|9     |Localization and navigation             | Lab-7: Mapping and Motion Planning                                    |
+|10    |Transformations                         |  Lab-8: Transformations                                               |
+|11    |Advanced Robotics + Q4                  | UVA Break Day                                                         |
+|12    |Project parameters                      | Project consult                                                       |
+|13    |Project check                           | Project consult                                                       |
+|14    |Project Presentations and Demos         | Taking stock                                                          |
  
-
- 
-
 # Course Policies
 
 * Students must fully comply with all the provisions of the University’s Honor Code. Students are expected to work independently unless instructed otherwise. Offering and accepting solutions from others is a serious offense. All suspected violations will be forwarded to the Honor Committee, and you may, at the instructor's discretion, receive an immediate zero on that assignment and fail the course regardless of any action taken by the Honor Committee.
