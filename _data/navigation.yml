@@ -3,8 +3,10 @@
   dropdown:
     - name: 1 - Introduction
       link: /lectures/lecture1/ 
-    - name: 2 - ROS processes, communication, and simulation environment
+    - name: 2 - Distinguishing Development Features
       link: /lectures/lecture2/ 
+    - name: 3 - Architectures and Machinery
+      link: /lectures/lecture3/ 
 - name: Labs
   link: /#
   dropdown:

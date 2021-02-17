@@ -1,15 +1,15 @@
 ---
-title: Distinguishing Development Features
-subtitle: 2/9/2021
+title: Architectures and Machinery
+subtitle: 2/16/2021
 layout: page
 
 ---
 
-## Lecture Slides: [PDF 6 slides per page download](../distinguishedDevelopmentFeatures.pdf)
+## Lecture Slides: [PDF 6 slides per page download](../machinery.pdf)
 
 <figure class="image is-16by9">
     <iframe class="has-ratio" frameborder="0" scrolling="yes" width="640" height="360"
-        src="../distinguishedDevelopmentFeatures.pdf">
+        src="../machinery.pdf">
     </iframe>
 </figure>
 
