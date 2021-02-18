@@ -310,7 +310,7 @@ You will notice that this code no longer uses a standard print command. Each of 
 
 Now let's make the changes to the `keyboard_manager` node to fulfill requirement **#2**. The `keyboard_manager` node needs to change in a few ways:
 
-1. We need to publich to the `/keyboardmanager/position` topic which is of type Vector3 containing the setpoint command for the drone position. This topic is subscribed to by the `state_and_safety` node.
+1. We need to publish to the `/keyboardmanager/position` topic which is of type Vector3 containing the setpoint command for the drone position. This topic is subscribed to by the `state_and_safety` node.
 2. It should only publish a message once a position is set instead of continuously publishing any keyboard input. To do this, we will change the `keyboard_manager` only to publish messages when the user hits **enter** on their keyboard.
 3. The `keyboard_manager` will display the position to be sent onto the terminal using logging. 
 
@@ -885,7 +885,7 @@ We can see that everything is as expected. We can see the Node which provides th
 ### Terminal 1
 
 ```bash
-$ source ~/fastsim/devel/setup.bash
+$ source ~/Desktop/CS4501-Labs/Lab3_ws/devel/setup.bash
 $ catkin build
 $ roslaunch flightcontroller fly.launch
 ```
@@ -893,7 +893,7 @@ $ roslaunch flightcontroller fly.launch
 ### Terminal 2
 
 ```bash
-$ source ~/fastsim/devel/setup.bash
+$ source ~/Desktop/CS4501-Labs/Lab3_ws/devel/setup.bash
 $ rostopic echo /uav/sensors/pressure
 >>> data: 1013.24774066
 >>> ---
@@ -906,7 +906,7 @@ $ rostopic echo /uav/sensors/pressure
 ### Terminal 3
 
 ```bash
-$ source ~/fastsim/devel/setup.bash
+$ source ~/Desktop/CS4501-Labs/Lab3_ws/devel/setup.bash
 $ rosservice call /calibrate_pressure 'True'
 >>> baseline: 1013.24756649
 ```
