@@ -16,5 +16,7 @@
       link: /labs/lab2/
     - name: 3 - Representing States, System Parameterization, and Services
       link: /labs/lab3/
+    - name: 4 - Sensors, Visualization, Error Correction
+      link: /labs/lab4/ 
 - name: Project
   link: /#
