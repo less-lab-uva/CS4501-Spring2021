@@ -41,7 +41,7 @@ CS 4414 (Operating Systems)  or advanced software development but with a good un
 |1     |Introduction                            | Lab-1: Set up and Basic ROS                                           |
 |2     |Distinguishing Development Features     | Lab-2: ROS processes, communication, and simulation environment       |
 |3     |Software Machinery  + Q1                | Lab-3: Types and machines                                             |
-|4     |Robot and world through sensors         | Lab-4: Sensor filtering and fusion                                    |
+|4     |Sensors and Noise Management            | Lab-4: Sensor filtering and fusion                                    |
 |5     |Perception  + Q2                        | Lab-5: Analyzing images                                               |
 |6     |UVA Break Day                           | Invited Speaker                                                       |
 |7     |Controlling your robot                  | Lab-6: Controlling and testing robots                                 |
