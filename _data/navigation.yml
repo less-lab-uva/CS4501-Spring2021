@@ -9,6 +9,8 @@
       link: /lectures/lecture3/ 
     - name: 4 - Sensors and Noise Management
       link: /lectures/lecture4/ 
+    - name: 5 - Perception
+      link: /lectures/lecture5/ 
 - name: Labs
   link: /#
   dropdown:
