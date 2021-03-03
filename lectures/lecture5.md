@@ -5,11 +5,11 @@ layout: page
 
 ---
 
-## Lecture Slides: [PDF 6 slides per page download](../perception.pdf)
+## Lecture Slides: [PDF 6 slides per page download](../perception_slides.pdf)
 
 <figure class="image is-16by9">
     <iframe class="has-ratio" frameborder="0" scrolling="yes" width="640" height="360"
-        src="../perception.pdf">
+        src="../perception_slides.pdf">
     </iframe>
 </figure>
 
