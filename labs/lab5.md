@@ -47,6 +47,12 @@ For each mission, the conservationist will set locations they want the drone to 
 # Prerequisites
 
 We will be using additional Python libraries in this lab that are not installed on the virtual machine you are using. Installing Python libraries can be done through the Python package manager `pip`. ROS uses Python2 and so we will use `pip` to install the packages using Python2. To install them run the following code inside a terminal.
+
+
+
+{% include notification.html message="Do not worry if you get the following error: ERROR: pip's legacy dependency resolver does not consider dependency conflicts when selecting packages. This behaviour is the source of the following dependency conflicts. launchpadlib 1.10.6 requires test resources, which is not installed." %}
+
+
 ```bash
 python2 -m pip install --upgrade pip
 python2 -m pip install keras==2.3.0
