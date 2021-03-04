@@ -4,11 +4,9 @@ subtitle: CS 4501 - Spring 2021
 layout: page
 ---
 
-{% include notification.html
-message="This is going to be a great class but the semester is likely to be another weird one, with remote learning and covid-struggles of different types, so let's be patient with each other, let's be honest with each other, and let's strive to learn as much as possible within our means. - Sebastian Elbaum"
-status="is-info"
-dismissable="true"
-icon="false" %}
+{% include notification.html message="This course is part of our ongoing effort to bridge the gap between **software engineering** and **robotics**. If you are a *student* and find value in the lectures and  in the labs please drop us an email so that we can get an idea of the impact this effort is having and how we can improve it. If you are a *faculty* member interested in teaching a course like this, reach out to us as we have  supplementary material and hard-earned experiences that might be helpful. Thank you!  - Sebastian Elbaum." 
+status="is-success" 
+icon="fas fa-exclamation-triangle" %}
 
 # Team
 
@@ -17,6 +15,12 @@ icon="false" %}
 * Meriel Stein - Teaching Assistant, meriel at virginia
 * Carl Hildebrandt  - Leads Labs, hildebrandt.carl at virginia 
 
+
+{% include notification.html
+message="This is going to be a great class but the semester is likely to be another weird one, with remote learning and covid-struggles of different types, so let's be patient with each other, let's be honest with each other, and let's strive to learn as much as possible within our means. - Sebastian Elbaum"
+status="is-info"
+dismissable="true"
+icon="false" %}
 
 # Goal and Scope
 
@@ -41,8 +45,8 @@ CS 4414 (Operating Systems)  or advanced software development but with a good un
 |1     |Introduction                            | Lab-1: Set up and Basic ROS                                           |
 |2     |Distinguishing Development Features     | Lab-2: ROS processes, communication, and simulation environment       |
 |3     |Software Machinery  + Q1                | Lab-3: Types and machines                                             |
-|4     |Sensors and Noise Management            | Lab-4: Sensor filtering and fusion                                    |
-|5     |Perception  + Q2                        | Lab-5: Analyzing images                                               |
+|4     |Robot and world through sensors         | Lab-4: Sensor filtering and fusion                                    |
+|5     |Perception  + Q2                        | Lab-5: Perception though Analyzing Images                                            |
 |6     |UVA Break Day                           | Invited Speaker                                                       |
 |7     |Controlling your robot                  | Lab-6: Controlling and testing robots                                 |
 |8     |Making plans    + Q3                    | Lab-E: Ethics                                                         |
@@ -80,7 +84,7 @@ CS 4414 (Operating Systems)  or advanced software development but with a good un
 
 # FAQ
 1. **Is this course for me?**
-This is a class for students who have no or limited experience in programming robots but are interested in learning more about how we develop systems that interact with the physical world. Note that this is just the second time this course is being delivered, so the material and schedule is likely to be tweaked as the course evolves, so you need to be comfortable taking an exploratory class with us.
+This is a class for students who have no or limited experience in  robotics but are interested in learning more about how we develop systems that interact with the physical world. Note that this is just the second time this course is being delivered, so the material and schedule is likely to be tweaked as the course evolves, so you need to be comfortable taking an exploratory class with us.
 2. **What is this course NOT about?**
 This class is not about AI, mechanical design, or electronic design. It is mainly about how to build software that will operate mobile robots in the physical world.
 3. **What is the structure of the course?**

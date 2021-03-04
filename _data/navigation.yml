@@ -22,5 +22,7 @@
       link: /labs/lab3/
     - name: 4 - Sensors, Visualization, Error Correction
       link: /labs/lab4/ 
+    - name: 5 - Perception though Analyzing Images
+      link: /labs/lab5/ 
 - name: Project
   link: /#
