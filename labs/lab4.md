@@ -918,8 +918,8 @@ class AltitudeKalman:
                 self.changed = False
             if self.predicted_altitude is not None:
                if self.has_velocity_data:
-                   current_time = rospy.Time()
-                   delta_t = (current_time - self.last_update).to_sec()
+                   current_time = rospy.Time.now()
+                   delta_t = (current_time - self.last_update).to_sec() if self.last_update.to_sec() > 0 else 0
                    self.last_update = current_time
                    # TODO use the velocity data and the time since last update to create the current prediction
                    # Use the equations from the "Current Prediction" part of the diagram above

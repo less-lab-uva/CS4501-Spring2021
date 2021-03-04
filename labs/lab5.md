@@ -793,8 +793,36 @@ More specifically, start by creating a list of classes `'dolphin', 'seal', 'peng
 
 # Checkpoint 4
 
-1. Take a screenshot of the training and validation graph during the training process independent of ROS. We require a training and validation accuracy of at least 60%.
+Proceed to train your DNN and add it into the perception node.
+
+1. Take a screenshot of the training and validation graph during the training process independent of ROS. We require a testing accuracy of at least 60%.
 2. Showcase your drone flying to an animal and classifying it.
 3. Are there cases where your drone incorrectly classifies the animal? Why do you think this is?
 
 ---
+
+Congratulations, you are done with Lab 5!
+
+---
+
+Final Check:
+
+1. Show that your drone continuously flies between points in the following sets of waypoints `'[2,6],[7,0],[4,-2],[-6,-6]]'` and `'[-4,-1],[2,-4],[-7,0],[4,4]]'`:
+    1. Show that your drone navigates to each of the waypoint sets while displaying the RQT image view. See if you can manually spot an animal.
+    2. Show your drone waiting at each waypoint for 5 seconds.
+    3. Explain how you implemented the `visit_waypoints` node.
+
+2. Implement the `marine_life_detection.py` class located in the `perception`.
+    1. Showcase that your functions work correctly by running the unit tests.
+    2. What other technique could you use to achieve similar results?
+    3. Explain how you determined if an animal was present using the mask. What threshold did you use, how determine the best value to use?
+    4. When would your technique not work?
+
+3. Showcase the integration of the perception layer into ROS.
+    1. Showcase your drone traversing the waypoints on a given scenario and autonomously detecting an animal. 
+    2. Showcase that your drone publishes that an animal is detected by echoing `/marine_life_detected`.
+
+4. Proceed to train your DNN and add it into the perception node.
+    1. Take a screenshot of the training and validation graph during the training process independent of ROS. We require a testing accuracy of at least 60%.
+    2. Showcase your drone flying to an animal and classifying it.
+    3. Are there cases where your drone incorrectly classifies the animal? Why do you think this is?
