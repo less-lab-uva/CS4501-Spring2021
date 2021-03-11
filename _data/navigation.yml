@@ -24,5 +24,7 @@
       link: /labs/lab4/ 
     - name: 5 - Perception though Analyzing Images
       link: /labs/lab5/ 
+    - name: E - Ethics in Robotics
+      link: /labs/labE/ 
 - name: Project
   link: /#
