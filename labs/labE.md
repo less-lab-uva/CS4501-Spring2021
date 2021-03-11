@@ -39,7 +39,10 @@ The lab is divided in two parts: **Preparation** and **Debate**.
 **Preparation.**
 Start by forming a team with another class member (teams of 2) and pick one of the **prompts** provided in the next section. Then, your team must pick a side -- affirmative or negative -- and begin to build an argument around that position (more details on building the argument are found later in this doc).
 
-Signup for teams, prompts, and affirmative/negative positions are available at [this google spreadsheet](https://docs.google.com/spreadsheets/d/14P6ccK_N2kmGguAlfEjwIMGkgzYyUN1Uk8nzB8UJiyc/edit?usp=sharing). Signup is on a first come, first serve basis so sign up quickly if you see a prompt you really like.
+Signup for teams, prompts, and affirmative/negative positions are available at 
+[this google spreadsheet](https://docs.google.com/spreadsheets/d/14P6ccK_N2kmGguAlfEjwIMGkgzYyUN1Uk8nzB8UJiyc/edit?usp=sharing).
+The link is visible to anyone who is logged into their UVA Google Drive account, 
+Signup is on a first come, first serve basis so sign up quickly if you see a prompt you really like.
 Note that teams on opposite positions of the same prompt will be debating against each other.
 
 For example, let's say my team chooses a prompt like "Should businesses be allowed to make companionship robots for widespread commercial production?", and the position that I've chosen is affirmative; i.e. I've answered the question with a "Yes, they should be allowed to."
@@ -203,3 +206,4 @@ Here are just a few papers (list is a work in progress) from researchers who are
 + [Kush Varshney](http://www.cs.cmu.edu/~rnoothig/papers/policy_orchestration.pdf)
 + [Aimee van Wynsberghe](https://link.springer.com/article/10.1007/s11948-011-9343-6)
 + [IEEE Ethics in Action](https://ethicsinaction.ieee.org/)
++ [Online Ethics Center for Engineering and Science](https://onlineethics.org/)
