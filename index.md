@@ -46,12 +46,12 @@ CS 4414 (Operating Systems)  or advanced software development but with a good un
 |2     |Distinguishing Development Features     | Lab-2: ROS processes, communication, and simulation environment       |
 |3     |Software Machinery  + Q1                | Lab-3: Types and machines                                             |
 |4     |Robot and world through sensors         | Lab-4: Sensor filtering and fusion                                    |
-|5     |Perception  + Q2                        | Lab-5: Perception though Analyzing Images                                            |
+|5     |Perception  + Q2                        | Lab-5: Perception though Analyzing Images                             |
 |6     |UVA Break Day                           | Invited Speaker                                                       |
-|7     |Controlling your robot                  | Lab-6: Controlling and testing robots                                 |
-|8     |Making plans    + Q3                    | Lab-E: Ethics                                                         |
+|7     |Controlling your robot                  | Lab-E: Robotics and Ethics                                            |
+|8     |Making plans    + Q3                    | Lab-6: Controlling and testing robots                                 |
 |9     |Localization and navigation             | Lab-7: Mapping and Motion Planning                                    |
-|10    |Transformations                         |  Lab-8: Transformations                                               |
+|10    |Transformations                         | Lab-8: Transformations                                                |
 |11    |Advanced Robotics + Q4                  | UVA Break Day                                                         |
 |12    |Project parameters                      | Project consult                                                       |
 |13    |Project check                           | Project consult                                                       |

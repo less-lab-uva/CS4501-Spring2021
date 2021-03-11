@@ -110,4 +110,96 @@ I've organized them this way because I believe I can confidently argue that the 
 Additionally, keep in mind the potential counterarguments. Acknowledging your opponent's points shows that you have a well thought out, 
 comprehensive position and disarms your opponent ahead of time.
 The negative position towards my example question might argue that companion robots might, through poor programming, hurt the people they are meant to be helping. 
-Anticipating that, I might include a point in my argument that a companion robot only has the capabilities we equip it with, and its size and shape could be constrained to be light enough to be lifted by a human or to be made of only soft, bouncy materials that cannot dam
+Anticipating that, I might include a point in my argument that a companion robot only has the capabilities we equip it with, and its size and shape could be constrained to be light enough to be lifted by a human or to be made of only soft, bouncy materials that cannot damage people or structures.
+
+
+# Checkpoint 1
+
+Write up a 2-page outline of your position and how you intend to argue it, with all relevant sources cited. 
+Your outline should consist of bulletpoints with a level of detail similar to the ones shown above  so you can easily reference this outline  during your debate.
+In this outline, organize your arguments to address the following questions:
+1. How is this problem relevant today? 
+2. Why should the average person care? The average computer scientist?
+3. What are the potential consequences/future outcome if your position is not followed? 
+4. Does this position set a problematic precedent?
+5. Can your position be legislated? Can that legislation be enforced? Can it be incentivized?
+6. Under what circumstances might the counterarguments to your position be acceptable? Are those circumstances realistic? 
+
+**This checkpoint needs to be handed in on Collab the day of the in-lab debate (March 18, 2021).** Part of the grade for this lab is based on how well you've prepared, and this outline is how we'll determine that.  
+
+
+# Debate
+
+Each debate will be 11 minutes long, broken down into an introduction to the topic, timed rebuttals, and a period of question-and-answer from the audience. 
+At the end of the debate, the audience will be polled for who they think won, and the winner will earn extra credit points towards their lab grade.
+The class has 10 teams, so there will be 5 debates with two teams per debate -- one affirmative, one negative.
+
+The structure of each debate is as follows:
+1. Introduction to the topic & opening points by speaker(s) with affirmative position: 2 minutes
+2. Rebuttal & new points by speaker(s) with negative position: 2 minutes
+3. Rebuttal & new points by speaker(s) with affirmative position: 2 minutes
+4. Rebuttal, new points, and closing remarks by speaker(s) with negative position: 2 minutes
+5. Question-and-answer from audience: 2 minutes
+6. Poll audience via Zoom poll while the next debate speakers get set up: 1 minute
+
+During the debate, keep these rules in mind:
+* Moderators will cut you off at 2 minutes. Moderators will post "30 seconds", "10 seconds", and "time" in the Zoom chat to indicate the cutoff. Be mindful of this so you aren't cut off midsentence. 
+* There is no time in between introduction and rebuttals, being prepared and thinking on your feet will be key to winning the argument
+* Questions can be asked to either team, or both teams.
+
+
+## Preparing for the Debate
+
+When preparing for the debate  keep in mind the debate structure, delivery of your message, and that your responses stay on topic and within time. Do not read from notecards or prewritten pages, make eye contact with your audience, and keep in mind the length of your responses so the moderator does not cut you off mid-sentence.
+We understand that there are certain cases where camera on might no be an option. We highly recommend that your camera is on to help engage with your audiance. Let the instructor know ahead of time if there is a reason your camera needs to be off.
+
+You may want to do a dry run of your debate arguments  with your teammate or practice explaining the context of the question and your arguments to friends to see how a person unfamiliar with the topic would understand your presentation.
+
+## Audience Questions
+
+On the day of the debate, the audience will be asked to contribute questions to a Slack channel during each debate. 
+Before the question-and-answer period, try to vote on your favorite question for each debate topic. 
+Students with the highest-scoring questions will get time to ask their question during the question-and-answer period. 
+Contributing questions on the Slack will contribute towards your participation grade.
+We expect you to contribute at least one question per debate you are not apart of, and to upvote at least two other questions per debate.
+
+
+#  Checkpoint 2
+ 
+1. The speakers’ statements clearly supported their position. (20%)
+2. The speakers’ statements appeared to be well researched and documented. (20%)
+3. Arguments were presented with clarity and appropriate volume.  (20%)
+4. Rebuttals were specific to opposing arguments and expressed with clarity.  (20%)
+5. The speakers participated in asking questions for others’ debates (20%)
+6. Outcome as per audience (+1 extra credit point)
+
+
+
+# To Check
+
+At the end of this lab, you should have the following:
+
+1. An outline of your position and corresponding arguments.
+2. A handful of resources for addressing questions of ethics in the field of robotics.
+3. An understanding that these questions are ongoing and evolve with the technologies that provoke them.
+
+
+ 
+# Extra
+ 
+Here are just a few papers (list is a work in progress) from researchers who are currently working in topics of fairness, ethics, and discrimination in robotics and beyond, that may be good for background reading:
++ [Keith Abney](https://apps.dtic.mil/sti/pdfs/ADA534697.pdf)
++ [Fritz Allhoff](https://www.sciencedirect.com/science/article/pii/S2542660518300532)
++ [Ron Arkin](https://www.cc.gatech.edu/aimosaic/faculty/arkin/)
++ [George Bekey](https://apps.dtic.mil/sti/citations/ADA534697)
++ [Jean-François Bonnefon](https://science.sciencemag.org/content/352/6293/1573)
++ [Joanna J. Bryson](http://www.cs.bath.ac.uk/~jjb/ftp/Bryson19AIforLawofAI.pdf)
++ [Virginia Eubanks](https://openjournals.uwaterloo.ca/index.php/JoCI/article/download/2373/2916)
++ [Katya Klinova](https://arxiv.org/abs/2011.02787)
++ [Patrick Lin](https://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=1004&context=phil_fac)
++ [Margaret Mitchell](https://arxiv.org/pdf/1801.07593)
++ [Iyad Rahwan](https://www.nature.com/articles/s41586-018-0637-6)
++ [Stuart Rusel](http://people.eecs.berkeley.edu/~russell/) 
++ [Kush Varshney](http://www.cs.cmu.edu/~rnoothig/papers/policy_orchestration.pdf)
++ [Aimee van Wynsberghe](https://link.springer.com/article/10.1007/s11948-011-9343-6)
++ [IEEE Ethics in Action](https://ethicsinaction.ieee.org/)
