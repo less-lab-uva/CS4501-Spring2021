@@ -60,13 +60,9 @@ python2 -m pip install sklearn
 
 Depending on your internet speed, this might take a few minutes.
 
-{% include notification.html
-message="We have noticed that some virtual machines do not support the instructions required by `tensorflow==1.14`. Please run the following check to see if this might be an issue for you."
-icon="false"
-status="is-danger" %}
-
-<p></p>
-
+{% include message.html
+header="We have noticed that some virtual machines do not support the instructions required by `tensorflow==1.14`. Please run the following check to see if this might be an issue for you."
+body="
 To confirm that this version of TensorFlow works on your virtual machine try the following. Open a terminal and run:
 ```bash
 $ python2
@@ -85,7 +81,10 @@ Once you have installed TensorFlow 1.5, check that you can import TensorFlow usi
 
 We need to make a final change to update the `train_model.py` code. We need to remove any references to functions or parameters that were not present in the older version of Tensorflow. To do this, replace the file `lab5_ws/src/perception/machine_learning/train_model.py` with the version given below:
 
-Download: <a href='./../images/lab5/train_model.py' >train_model.py</a>
+Download: <a href='./../images/lab5/train_model.py' >train_model.py</a>"
+status="is-danger" %}
+
+<p></p>
 
 # Part 1: Getting to Identify the Animals
 
