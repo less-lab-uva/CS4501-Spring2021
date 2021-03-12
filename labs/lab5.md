@@ -48,8 +48,6 @@ For each mission, the conservationist will set locations they want the drone to 
 
 We will be using additional Python libraries in this lab that are not installed on the virtual machine you are using. Installing Python libraries can be done through the Python package manager `pip`. ROS uses Python2 and so we will use `pip` to install the packages using Python2. To install them run the following code inside a terminal.
 
-
-
 {% include notification.html message="Do not worry if you get the following error: ERROR: pip's legacy dependency resolver does not consider dependency conflicts when selecting packages. This behaviour is the source of the following dependency conflicts. launchpadlib 1.10.6 requires test resources, which is not installed." %}
 
 
@@ -61,6 +59,33 @@ python2 -m pip install sklearn
 ```
 
 Depending on your internet speed, this might take a few minutes.
+
+{% include notification.html
+message="We have noticed that some virtual machines do not support the instructions required by `tensorflow==1.14`. Please run the following check to see if this might be an issue for you."
+icon="false"
+status="is-danger" %}
+
+<p></p>
+
+To confirm that this version of TensorFlow works on your virtual machine try the following. Open a terminal and run:
+```bash
+$ python2
+>>> import tensorflow
+```
+
+If running import tensorflow causes an error, then it is likely that your version of TensorFlow will not work on your virtual machine. To solve this we need to downgrade TensorFlow to an older version. You can do that by running:
+```bash
+$ python2 -m pip uninstall tensorflow
+$ python2 -m pip uninstall keras
+$ python2 -m pip install keras==2.1.4
+$ python2 -m pip install tensorflow==1.5
+```
+
+Once you have installed TensorFlow 1.5, check that you can import TensorFlow using the same test as above. You should now able to import TensorFlow.  
+
+We need to make a final change to update the `train_model.py` code. We need to remove any references to functions or parameters that were not present in the older version of Tensorflow. To do this, replace the file `lab5_ws/src/perception/machine_learning/train_model.py` with the version given below:
+
+Download: <a href='./../images/lab5/train_model.py' >train_model.py</a>
 
 # Part 1: Getting to Identify the Animals
 
@@ -813,7 +838,7 @@ Congratulations, you are done with Lab 5!
 
 Final Check:
 
-1. Show that your drone continuously flies between points in the following sets of waypoints `'[2,6],[7,0],[4,-2],[-6,-6]]'` and `'[-4,-1],[2,-4],[-7,0],[4,4]]'`:
+1. Show that your drone continuously flies between points in the following sets of waypoints `'[[2,6],[7,0],[4,-2],[-6,-6]]'` and `' [[-4,-1],[2,-4],[-7,0],[4,4]]'`:
     1. Show that your drone navigates to each of the waypoint sets while displaying the RQT image view. See if you can manually spot an animal.
     2. Show your drone waiting at each waypoint for 5 seconds.
     3. Explain how you implemented the `visit_waypoints` node.
@@ -832,3 +857,4 @@ Final Check:
     1. Take a screenshot of the training and validation graph during the training process independent of ROS. We require a testing accuracy of at least 60%.
     2. Showcase your drone flying to an animal and classifying it.
     3. Are there cases where your drone incorrectly classifies the animal? Why do you think this is?
+w
