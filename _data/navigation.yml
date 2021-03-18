@@ -11,6 +11,8 @@
       link: /lectures/lecture4/ 
     - name: 5 - Perception
       link: /lectures/lecture5/ 
+    - name: 6 - Control
+      link: /lectures/lecture6/ 
 - name: Labs
   link: /#
   dropdown:
