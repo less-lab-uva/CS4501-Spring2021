@@ -1,6 +1,6 @@
 ---
 title: Lab 6
-subtitle: Controlling and Testing Robots
+subtitle:  Controlling and Testing Robots
 layout: page
 show_sidebar: true 
 ---
@@ -136,7 +136,7 @@ Below is a simplified diagram showing the core nodes involved in this lab. The g
 The skeleton code is provided in `simple_control/src/ship_following_controller.py`:
 
 
-```
+```python
 #!/usr/bin/env python
 import rospy
 import time
@@ -156,52 +156,57 @@ from pid import PID
 class ShipFollower():
   # On node initialization
   def __init__(self):
-    # Init the x and y pid params and PID classes
+    # Init the x and y pid params
+
+    # Init the x and y PIDs
 
     # Init distance epsilon
 
-    # Create the position message we are going to be sending
+    # Init class vars
+    self.pos = Vector3()
+    self.pos.x = 0.0
+    self.pos.y = 0.0
+    self.pos.z = 9.0
 
     # Create the publishers and subscribers
-    
+    self.position_pub = None# TODO
     self.mainloop()
 
-  # intake notification of the ship stopping (end of test)
   def get_stop(self, msg):
     pass
 
-  # callback for GPS position
+  # Subscribe to the current GPS data
   def get_gps(self, msg):
     pass
 
-  # callback for downfacing camera image
-  def get_image(self, msg):
-    pass
-  
-  # TO DO BEFORE CHECKPOINT 1
+  # TO DO FOR CHECKPOINT 1
   # callback for /ship/beacon
-  # intake coarse estimate of x,y distance to ship
   def get_ship_distance(self, msg):
     pass
 
-  # TO DO BEFORE CHECKPOINT 1
+  # TO DO FOR CHECKPOINT 1
   # callback for /ship_image_location
-  # convert center of mass in pixel distance to environment distance
+  # convert center of mass in pixels to environment distance
   def get_image_distance(self, msg):
     pass
-    
+
+  # callback for downfacing camera
+  def get_image(self, msg):
+    pass
+
   def mainloop(self):
     # Set the rate of this loop
     rate = rospy.Rate(4)
 
+    # Publish (0,0,9) to start to help find the ship
     self.position_pub.publish(self.pos)
 
     # While ROS is still running
     while not rospy.is_shutdown():      
-
-      # Call PIDs
+      # Call the PIDs
       
-      # Publish requested position
+      # Publish the position
+
 
       # Sleep for the remainder of the loop
       rate.sleep()
