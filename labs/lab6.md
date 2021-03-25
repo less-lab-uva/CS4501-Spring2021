@@ -320,7 +320,7 @@ Here you can see that the first GPS test passed.
 **Your task** now is to create similar tests that check each of the following topics meets the required frequency:
 
 * The ships beacon topic: `/ship/beacon` - (Required 4Hz)
-* The topic that describes when a ship is detected: `/ship_detected` - (Required 4Hz)
+* The topic that describes when a ship is detected: `/ship_detected` - (Required 2Hz)
 * The topic that contains the camera data: `/uav/sensors/camera` - (Required 5Hz)
 * The topic that outputs your PID commands: `/uva/input/position_request` - (Required 4Hz)
 
