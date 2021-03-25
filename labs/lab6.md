@@ -1,6 +1,6 @@
 ---
 title: Lab 6
-subtitle:  Controlling and Testing Robots
+subtitle: Controlling and Testing Robots
 layout: page
 show_sidebar: true 
 ---
