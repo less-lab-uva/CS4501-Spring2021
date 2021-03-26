@@ -90,6 +90,7 @@ The `ship_follower_node` node should subscribe to:
 The node must read the following parameters from the parameter server for the *x* and *y* PIDs: the proportional constants *px* and *py*, the integral constants *ix* and *iy*, and the derivative constants *dx* and *dy*. Those parameters must be part of the relevant launch file.
 
 
+ 
 ## The Ship Node - `ship_node`
 
 Since the `ship_follower_node` gets a lot of information from `ship_node` and we will be using `ship_node` to test  `ship_follower_node`, it is worth understanding some of its operations.
@@ -184,7 +185,8 @@ class ShipFollower():
 
   # TO DO FOR CHECKPOINT 1
   # callback for /ship_image_location
-  # convert center of mass in pixels to environment distance
+  # convert center of mass from x,y offset in pixels from top left corner of image
+  # to x,y offset from center of image
   def get_image_distance(self, msg):
     pass
 
