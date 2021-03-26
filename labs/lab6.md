@@ -56,42 +56,40 @@ $ git pull
 
 ## Requirements for Ship Follower -  `ship_follower_node` 
 
-As mentioned earlier, the goal of `ship_follower_node` is to position your drone over a ship. A key requirement is that the node must use two well-tuned PID controllers (one for the *x* and for the *y* axis) to position the drone.
-The drone should maintain a height of 9m after takeoff. When the drone is at a height of 9m, the viewfinder for the camera shows about 1 unit square and the images are 200 pixels by 200 pixels.
+As mentioned earlier, the goal of `ship_follower_node` is to position your drone over a ship. 
 
-### Configuration parameters requirements:
-The node must read the following parameters from the parameter server for the *x* and *y* PIDs: the proportional constants *px* and *py*, the integral constants *ix* and *iy*, and the derivative constants *dx* and *dy*. Those parameters must be part of the relevant launch file.
+The positioning requires two steps:
 
-### Inputs requirements:
++ Take the drone close to the ship using the `/ship/beacon`
++ Use your well-tuned PID controllers (one for the *x* and for the *y* axis) to position the drone on top of the ship based on the ship pose estimates in `/ship_image_location` computed from the down-facing camera images.
+
+Once the node is implemented and the PID fully tuned, the drone should be able to:
++ Follow the ship without losing sight of it
++ Achieve and maintain a distance within the `ship_epsilon` upon stabilizing
+
+The drone must fly at 9m of altitude for its perception capabilities to work correctly. At that altitude the viewfinder for the camera will show  about 1 unit square.
+The camera images are 200 pixels by 200 pixels.
+
+The node must publish to the topic `/uav/input/position_request` at a rate that can keep up with the ship's speed. 
+As in previous labs, `/uav/input/position_request` supplies `state_safety_node` with *x, y, z* coordinates to which the drone will attempt to fly.
+
+
+##### Inputs required:
 
 The `ship_follower_node` node should subscribe to:
 
 + `/uav/sensors/gps`, which contains the *x,y,z* values for the position of the drone 
 + `/ship/beacon`, which gives a coarse estimate of the relative location of the ship    
-+ `/ship_image_location`, which is a part of the `perception` package of the drone and supplies fine  measurement of the ship position relative to the drone by using the `downward_facing_camera` node of the drone
++ `/ship_image_location`, which is published by the `perception_node` and supplies an estimated pose of the ship in the image captured by the `downward_facing_camera` node of the drone; the PID controller will work based on the measures captured by this estimate
 + `/ship_detected`, which determines whether the ship is in the viewfinder
 + `/ship/stop_notification`, which indicates whether the ship has stopped.
-
-Additionally, `rosparam`s for the P, I, and D coefficients for *x* and *y* need to be retrieved. 
-
-### Functional requirements:
-
-There are several important parts of this node that need to be implemented before the *x* and *y* PIDs are called or implemented. 
-+ The node needs to subscribe to `/uav/sensors/gps`, `/ship/beacon`, and `/ship_image_location` and implement callbacks for each.
-+ `/ship_image_location` needs to be processed before being fed to the respective PIDs. 
-+ `/ship/beacon` needs to be captured and combined with the error derived from processing `/ship_image_location` if the drone is able to sense the ship at that loop.
-+ The drone should maintain a height of 9m after takeoff.
-
-Once the PID is implemented and fully tuned, it should be able to:
-+ Follow the ship without losing sight of it
-+ Achieve and maintain a distance within the `ship_epsilon` upon stabilizing
-
-### Output requirements
-
-The node must publish to the topic `/uav/input/position_request` at a rate that can keep up with the ship's speed. 
-As in previous labs, `/uav/input/position_request` supplies `state_safety_node` with *x, y, z* coordinates to which the drone will attempt to fly.
-
  
+
+##### Configuration parameters required:
+
+The node must read the following parameters from the parameter server for the *x* and *y* PIDs: the proportional constants *px* and *py*, the integral constants *ix* and *iy*, and the derivative constants *dx* and *dy*. Those parameters must be part of the relevant launch file.
+
+
 ## The Ship Node - `ship_node`
 
 Since the `ship_follower_node` gets a lot of information from `ship_node` and we will be using `ship_node` to test  `ship_follower_node`, it is worth understanding some of its operations.
@@ -320,7 +318,7 @@ Here you can see that the first GPS test passed.
 **Your task** now is to create similar tests that check each of the following topics meets the required frequency:
 
 * The ships beacon topic: `/ship/beacon` - (Required 4Hz)
-* The topic that describes when a ship is detected: `/ship_detected` - (Required 4Hz)
+* The topic that describes when a ship is detected: `/ship_detected` - (Required 2Hz)
 * The topic that contains the camera data: `/uav/sensors/camera` - (Required 5Hz)
 * The topic that outputs your PID commands: `/uva/input/position_request` - (Required 4Hz)
 
