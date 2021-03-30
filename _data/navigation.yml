@@ -13,6 +13,8 @@
       link: /lectures/lecture5/ 
     - name: 6 - Control
       link: /lectures/lecture6/ 
+    - name: 7 - Motion Planning  
+      link: /lectures/lecture7/ 
 - name: Labs
   link: /#
   dropdown:
