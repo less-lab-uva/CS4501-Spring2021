@@ -602,7 +602,8 @@ Final Check:
 2. Showcase your tests working for the PID controllers P term.
     1. Showcase your drone passing all developed tests (except the last one)
     2. If test 3 fails, why does it fail?
-    3. Create a new publisher in `ship_follower_node` to publish a Vector3 on the topic `ship/estimated_position`, that estimates the ship's position. Using rqt_plot, show the x and y of the estimated ship position in `uav/sensors/gps` alongside the x and y of `uav/input/position_request`.  
+    3. Create a new publisher in `ship_follower_node` to publish a Vector3 on the topic `ship/estimated_position`, that estimates the ship's position using processing of `/ship/beacon` and `/ship_image_location`. How closely do they follow each other?
+    4. Using rqt_plot, show the x and y of the estimated ship position in `uav/sensors/gps` alongside the x and y of `uav/input/position_request`.  How quickly does `/uav/sensors/gps` 
 
 
 3. Showcase your tests working for the PID controllers D term.
