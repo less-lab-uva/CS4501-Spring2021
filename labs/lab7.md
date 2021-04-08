@@ -581,7 +581,7 @@ Once you are sure your code works you should be able to launch the simulator and
 Terminal 1:
 
 ```
-$ roslaunch flightcontroller fly_path.launch map_file:=map_medium0.yaml
+$ roslaunch flightcontroller fly.launch map_file:=map_medium0.yaml
 ```
 
 Terminal 2: 
@@ -615,7 +615,7 @@ To complete this checkpoint you need to:
 Specifically launch the small map by running:
 
 ```
-$ roslaunch flightcontroller fly_path.launch map_file:=map_small0.yaml
+$ roslaunch flightcontroller fly.launch map_file:=map_small0.yaml
 ```
 
 Then fly to three different goals. Run the following commands:
