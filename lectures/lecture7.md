@@ -5,12 +5,24 @@ layout: page
 
 ---
 
-## Lecture Slides: [PDF 6 slides per page download](motion_planning_I.pdf)
+## Lecture Slides: 
 
+First Part [PDF 6 slides per page download](motion_planning_I.pdf)
+ 
 
 <figure class="image is-16by9">
     <iframe class="has-ratio" frameborder="0" scrolling="yes" width="640" height="360"
         src="../motion_planning_I.pdf">
+    </iframe>
+</figure>
+
+
+Second Part [PDF 6 slides per page download](motion_planning_II.pdf)
+
+
+<figure class="image is-16by9">
+    <iframe class="has-ratio" frameborder="0" scrolling="yes" width="640" height="360"
+        src="../motion_planning_II.pdf">
     </iframe>
 </figure>
 
