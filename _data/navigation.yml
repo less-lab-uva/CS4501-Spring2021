@@ -32,6 +32,8 @@
       link: /labs/lab6/ 
     - name: 7 - Mapping and Motion Planning
       link: /labs/lab7/ 
+    - name: 8 - Transformations
+      link: /labs/lab8/
     - name: E - Ethics in Robotics
       link: /labs/labE/ 
 - name: Project
