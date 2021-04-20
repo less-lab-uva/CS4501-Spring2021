@@ -78,7 +78,7 @@ To achieve your mission your must:
     2. Once Skipper is within 5 meters of the drone (discluding the distance in **z**), Skipper freezes, and once you are within 1 meter the rescue basket will descend to pick it up.
     3. Once Skipper is in the basket the drone should navigate to the closest safe landing spot. If you pick up the dog before finding a safe spot, you must find one before the timeout period for the mission runs out.
   
-All these tasks must be accomplished within a 90-second timeout period. Once the timeout period runs out, the drone battery is exhausted and the mission will end in a failure.
+All these tasks must be accomplished within a 120-second timeout period. Once the timeout period runs out, the drone battery is exhausted and the mission will end in a failure.
 
 You will know that the timeout period has ended by warning messages published on the `mission_monitor` topic, described in detail below. 
 
@@ -232,7 +232,7 @@ You may implement this class however you like with what you've learned from prev
 Your project will be evaluated on your ability to meet the following requirements and explain your code thoroughly to the teaching staff. 
 
  1. The drone must never collide with an obstacle or fire (*Automatically detected*)
- 2. The drone must find the dog and land in a safe spot within 90 seconds (*Automatically detected*)
+ 2. The drone must find the dog and land in a safe spot within 120 seconds (*Automatically detected*)
  3. The drone cannot go outside the map. (*Detected in rostests*)
  
  The checkpoints for this project are designed to be checked off as you go, ensuring steady progress towards the final deliverable.  
@@ -312,17 +312,14 @@ Checkpoint 2 items that are not satisfied by the due date, will get 50% credit i
 
 # Checkpoint 3 -- Presentations **(due May 6th)**
 
-1. Showcase your project working end-to-end to rescue the dog within a timeframe of 90 seconds.
-
-2. Provide evidence that it succeeds 3 out of 3 times within the timeout. This evidence can be running it in front of the TA or recorded video.
-
-4. Show that it runs on the tests provided the day-of using a new map we provide.
+1. Showcase your project working end-to-end to rescue the dog within a timeframe of 120 seconds.
+    2. Take video showing that it succeeds 3 out of 3 times within the timeout on 3 different maps. See the `fp_ws/src/flightcontroller/maps` directory for different maps.
 
 3. Put together a 3-minute presentation of the functional drone executing its mission, your design choices, and an overview of the easy and difficult aspects of this lab for you. Make sure your presentation answers the following questions:
     1. How does your state machine move between the various states of the mission?
     2. How did you handle perception, local planning, and global planning?
     3. What were the most challenging aspects for you (design, implementation, writing tests...)?
-    3. Show a video of your project running the mission from startup to landing.
+    3. Include the videos you took in part 1. You can speed up the videos to fit them within your 3-minute presentation time.
  
 ---
 
