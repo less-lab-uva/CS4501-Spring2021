@@ -258,7 +258,7 @@ status="is-success" %}
 
 1. Draw a diagram of your state machine. Under what conditions does it transition between states? How have you accounted for all possible states?
 
-2. Write a series of unit tests simulating input to show that your state machine can handle various types of missions (e.g. finding the dog before or after finding a safe zone, reinitiating the global search if the drone is not in the camera view, ...).
+2. Write a series of unit tests simulating input to show that your state machine can handle various types of missions (e.g. finding the dog before or after finding a safe zone, reinitiating the global search if the dog is lost from the drone camera view or never enters the drone camera view, ...).
 
 ## Checkpoint 1.2 -- Dog Perception
 
