@@ -3,9 +3,9 @@ title: CS4501
 tagline: CS4501
 email: selbaum@virginia.edu
 description: UVA's Robotics for Software Engineers undergraduate course.
-baseurl: "/CS4501-Website"
+baseurl: "/CS4501-Spring2021"
 url: https://less-lab-uva.github.io
-repository: "CS4501-Website"
+repository: "CS4501-Spring2021"
 permalink: pretty
 favicon: /favicon.ico
 team: /team
