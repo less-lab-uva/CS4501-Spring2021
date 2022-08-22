@@ -37,9 +37,9 @@ In this class, we are going to be using the Robotic Operating System ([ROS](http
 ---- 
 
 # Learning Objectives
-This lab is structured into two sections. The first shows you how to set up the Docker container that we will be using for all labs in this course. This section aims to teach how to:
-* Install a Docker container that includes ROS.
-* Run basic ROS commands in the Docker container.
+This lab is structured into two sections. The first shows you how to setup the virtual machine we will be using for this and futures labs. This section aims to teach how to:
+* Install a virtual machine that includes ROS.
+* Run basic ROS commands on a virtual machine.
 
 The second part of the lab aims at teaching you the basics of building ROS-based systems and tooling. More specifically it aims to teach you how to:
 * Compile ROS code.
@@ -49,23 +49,15 @@ The second part of the lab aims at teaching you the basics of building ROS-based
 ---- 
 
 # Getting a Machine with ROS
-ROS is mainly developed on Linux-Ubuntu. Therefore, you first need to install a Docker container that will allow you to start developing in ROS. A *Docker container* is a package that contains all dependencies required to run an application. The set-up process is outlined below:
+ROS is mainly developed on Linux-Ubuntu. We will, therefore, need you to install a virtual machine that will allow you to access Linux and start developing in ROS. We are providing a virtual machine with everything you need to get started. To set up the virtual machine, we need you to install Oracle Virtual Box. Virtual Box is a software that allows us to run virtual machines on top of multiple platforms like Windows and Mac OS.
 
-## Docker Setup:
-Open a new terminal (Terminal 1) and enter the following commands:
-```bash
-$ cd ~
-$ git clone https://github.com/adwiii/cs4501-robotics-docker.git
-$ cd cs4501-robotics-docker
-```
+## Installing Virtual Box:
+To install Virtual Box start by selecting your current operating system from the link below:
 
-Next, clone the class repository and build the container:
-```bash
-$ git clone https://github.com/less-lab-uva/CS4501-Labs.git
-$ docker-compose up --build
-```
+* [Windows hosts](https://download.virtualbox.org/virtualbox/6.1.16/VirtualBox-6.1.16-140961-Win.exe) 
+* [OS X hosts](https://download.virtualbox.org/virtualbox/6.1.16/VirtualBox-6.1.16-140961-OSX.dmg) 
 
-If successful, the output should look like this:
+This will download the install file. Click the install file and follow the prompts until Virtual Box has been successfully installed. If everything was successful, when you start Virtual Box you should see a screen similar to the one below:
 
 <div class="columns is-centered">
     <div class="column is-centered is-8">
@@ -75,25 +67,65 @@ If successful, the output should look like this:
     </div>
 </div>
 
-To access GUI applications, follow [this link](http://localhost:8080/vnc.html) and click "Connect".
+## Downloading the Virtual Machine:
+We are now going to download and install the virtual machine for this class. Start by downloading the virtual machine.
 
-Keep Terminal 1 running. Now, open a **new terminal** (Terminal 2) and enter the following commands to connect to your Docker container:
-```bash
-$ cd ~/cs4501-robotics-docker
-$ docker-compose exec ros bash
-```
+{% include notification.html message="This is a large download (~5GB) so it may take some time." %}
 
-## Test your Docker Container:
+* [Virtual Machine Download (file with .ova extension)](https://www.dropbox.com/s/uhzvbsv7z487tvu/CS4501-2021.ova?dl=1)
+
+Once you have downloaded the virtual machine, in Virtual Box, click `File->Import`, `Appliance->(In the file text-box search for "CS4501-2021.ova")->Continue`. You should see a screen like this:
+
+<div class="columns is-centered">
+    <div class="column is-centered is-8">
+        <figure class="image is-4by3">
+        <img src="../images/lab1/install2.png">
+        </figure>
+    </div>
+</div>
+
+Change the following settings to match your computer specifications:
+* CPU: Recommend 2 Cores
+* RAM: Recommend 2Gb
+
+**Note:** If you have a more powerful computer, feel free to increase these values. 
+
+When you are done click `Import` and wait for the setup to complete.
+
+## Using the Virtual Machine
+
+To run the virtual machine, click the green "Start" button. You will then see an Ubuntu 18.04 login screen. The login details are:
+
+* Username: **CS4501**
+* Password: **robot**
+
+## Adding Guest Additions
+
+VirtualBox's guest additions is additional software that may enable better performance and functionality in your virtual machines. For example, on your main computer, your OS knows what resolutions its display is using the drivers from your graphics card. A virtual machine can't do this, so it displays in a low resolution (such as 800x600) by default.
+
+Guest additions contains display drivers and other useful tools that make your virtual machine much more usable. 
+To install guest additions, with the virtual machine open, do the following:
+
+1. In the menu, Click `Devices->Insert Guest Additions CD Image`.
+2. A prompt will open in your virtual machine. Click `Run`
+3. Reboot the machine when it is done.
+
+{% include notification.html
+message="We have noticed that for certain machines, especially machines with high resolution screens, your virtual machine still might lag. Reducing the VM's resolution helps things to run faster since it has to render fewer pixels. First change Ubuntu's resolution by going to ``Settings->Devices->Displays->Resolution``, and changing it to something like (1024 X 768). You can then get Virtual Box to scale up the window to look bigger while keeping the lower internal resolution. While the virtual machine is running, up at the top left click ``View->Virtual Screen 1``. In that dropdown select one of the percentages."
+icon="false"
+status="is-success" %}
+
+## Test your Virtual Machine:
 
 <p> </p>
 
-To test that the Docker container and ROS are working properly, enter the following command into Terminal 2:
+To test that the machine and ROS is working open a terminal and run the following command:
 
-```bash
+```
 $ roscore
 ```
 
-The terminal should output something similar to what you see in the picture below:
+The terminal should output something similar to what you see in the picture below. If this is the case you are all done!
 
 <div class="columns is-centered">
     <div class="column is-centered is-8">
@@ -107,8 +139,8 @@ The terminal should output something similar to what you see in the picture belo
 ---- 
 # Checkpoint 1
 
-For this checkpoint, you should be able to do the following:
-1. Launch the Docker container
+At the end of this lab, you should be able to do the following:
+1. Launch the virtual machine
 2. Run `roscore` in the terminal
 
 {% include notification.html
@@ -137,7 +169,7 @@ Let's assume we have been given the software used to fly a rocket to the moon. T
 
 ## Downloading the Code
 
-To start the lab, we need to make sure the lab code is up to date. In your Docker container (Terminal 2), enter the following:
+To start the lab, we need to make sure the lab code is up to date. You can do that by opening a terminal and running:
 
 ```bash
 # Change to labs directory
@@ -154,13 +186,12 @@ Workspaces are one way to address the complexity in the development of large sys
 by providing a standard structure where developers and tools know where things are located.
 ROS even has community [conventions](https://www.ros.org/reps/rep-0128.html) on such structures.
 
-Let's now build the code in the workspace. In your Docker container (Terminal 2), run the following command:
+Let's now build the code in the workspace. Open a terminal in your virtual machine and run the following command:
 
 ```bash
 # Change the directory to the ROS workspace
-$ cd ~/CS4501-Labs/lab1_ws/
-# Source and compile the ROS code
-$ source /opt/ros/melodic/setup.bash
+$ cd ~/Desktop/CS4501-Labs/lab1_ws/
+# Compile the ROS code
 $ catkin build
 ```
 
@@ -169,35 +200,31 @@ $ catkin build
 If you get no errors, you have successfully build your rocket's ROS code.  ** When you change your code and want to run it, you should build it first.**
 
 Next, let's run our rocket software. 
-The rocket software consists of three software components. Let's start each component by opening  **three new terminals**, then enter the following:
+The rocket software consists of three software components. Let's start each component by opening  **four new terminals**. In each of the terminals run the following:
 
-### Terminal 2:
+### Terminal 0:
 We need to start the ROS core, a key piece of ROS infrastructure  which provides  rich standarized mechanisms for processes to communicate.
 ```bash
 # Start ROS in the background
 $ roscore
 ```
 
-### Terminal 3:
+### Terminal 1:
 
 ```bash
-# Start the Docker container
-$ docker-compose exec ros bash
 # Update your environment variables so that ROS knows where your workspace is
-$ source ~/CS4501-Labs/lab1_ws/devel/setup.bash
+$ source ~/Desktop/CS4501-Labs/lab1_ws/devel/setup.bash
 # Run the rocket-ship source code
 $ rosrun rocketship rocket_engine.py
 ```
 
 The `rocket_engine` software  controlling the power to the rocket engine is now running.  You will see no further messages printed in this terminal. 
 
-### Terminal 4:
+### Terminal 2:
 
 ```bash
-# Start the Docker container
-$ docker-compose exec ros bash
 # Update your environment variables so that ROS knows where your workspace is
-$ source ~/CS4501-Labs/lab1_ws/devel/setup.bash
+$ source ~/Desktop/CS4501-Labs/lab1_ws/devel/setup.bash
 # Run the rocket-ship source code
 $ rosrun rocketship main_controller
 ```
@@ -208,15 +235,13 @@ The `main_controller` which commands the `rocket_engine` to go at certain veloci
 >>> [ INFO] [...]: Rocket Ready for Countdown
 ```
 
-Now let's get ready to launch the rocket! Start the countdown using terminal 5.
+Now let's get ready to launch the rocket! Start the countdown using terminal 3.
 
-### Terminal 5:
+### Terminal 3:
 
 ```bash
-# Start the Docker container
-$ docker-compose exec ros bash
 # Update your environment variables so that ROS knows where your workspace is
-$ source ~/CS4501-Labs/lab1_ws/devel/setup.bash
+$ source ~/Desktop/CS4501-Labs/lab1_ws/devel/setup.bash
 # Run the rocket-ship source code
 $ rosrun rocketship countdown
 ```
@@ -225,7 +250,7 @@ The `countdown` component gives the command to the main_controller to initiate t
 
 
 
-If everything went correctly in terminal 4, you should see a countdown (after 5 seconds) and subsequent velocity commands as shown below:
+If everything went correctly in terminal 2, you should see a countdown (after 5 seconds) and subsequent velocity commands as shown below:
 
 ```bash
 >>> [ INFO] [...]: Countdown: 10s
@@ -245,7 +270,7 @@ $ CTRL-C
 
 But let's dive a bit deeper so that we start to understand what is going on behind the scenes. To launch this rocket, we needed four terminals. 
 to launch the `roscore`, the rocket_engine, the main_controller software, and the countdown software. 
-Using this information, we can start to understand some of the system organization as shown below: 
+Using this information, we can start to   understand some of the system organization as shown below: 
 
 <div class="columns is-centered">
     <div class="column is-centered is-8">
@@ -257,11 +282,15 @@ Using this information, we can start to understand some of the system organizati
 
 ## Roslaunch
 
-Having to run many different software components is common in robotics, but doing it manually by setting terminals as we have done is not practical, especially when deploying a system requires hundreds of processes to be run in specific ways.  Another way that ROS helps to address system complexity is by making it easier to deploy multiple software components through **launch files**.  Another benefit of a ROS launch file is that it automatically checks if a `roscore` is running, and if not, it starts one. 
+Having to run many different software components is common in robotics, but doing it manually by setting terminals as we have done is practical, especially when deploying a system requires hundreds of processes to be run in specific ways.  Another way that ROS helps to address system complexity is by making it easier to deploy multiple software components through **launch files**.  Another benefit of a ROS launch file is that it automatically checks if a `roscore` is running, and if not, it starts one. 
 
-Let's create a launch file to run all the software components of our rocket. First, open the base rocket.launch file provided to you. To do this, open the `~/CS4501-Labs/lab1_ws/src` directory in your preferred IDE.
+Let's create a launch file to run all the software components of our rocket. First, open the base rocket.launch file provided to you. You can do that using:
 
-Next, navigate to the `rocketship/launch/` directory and open the `rocket.launch` file. You will find an empty launch file with xml code as shown below:
+```bash
+$ code ~/Desktop/CS4501-Labs/lab1_ws/src
+```
+
+And then navigate to the launch folder under `rocketship/launch/rocket.launch`. You will find an empty launch file with xml code as shown below:
 
 ```xml
 <?xml version="1.0"?>
@@ -278,13 +307,11 @@ Let's add each of the different software components into the launch file. ROS ca
 <node pkg="rocketship" type="countdown" name="CountDownNode"></node>
 ```
 
-Take a second to explore what is inside the launch file. By using a launch file, ROS knows to start `roscore` automatically and how to start three software modules (nodes) `rocket_engine`, `main_controller`, and `countdown`. Each of the nodes belongs to the rocketship package (pkg). We want the `main_controller` to output to screen. Save the file and go back to your terminal. Let's launch the rocket. Close all terminals (except for Terminal 1) and open a new one. To launch the rocket we need to run:
+Take a second to explore what is inside the launch file. By using a launch file, ROS knows to start `roscore` automatically and how to start three software modules (nodes) `rocket_engine`, `main_controller`, and `countdown`. Each of the nodes belongs to the rocketship package (pkg). We want the `main_controller` to output to screen. Save the file and go back to your terminal. Let's launch the rocket. Close all terminals and open a new one. To launch the rocket we need to run:
 
 ```bash
-# Start the Docker container
-$ docker-compose exec ros bash
 # Update your environment variables so that ROS knows where your workspace is
-$ source ~/CS4501-Labs/lab1_ws/devel/setup.bash
+$ source ~/Desktop/CS4501-Labs/lab1_ws/devel/setup.bash
 # Run the countdown code
 $ roslaunch rocketship rocket.launch
 ```
@@ -295,11 +322,9 @@ This time you should see the rocket state that it is ready for launch. The count
 
 Next, let's use some of the built-in ROS tools to get a better understanding of how our rocketship works. Let's start by finding what kind of communication is occurring between the software modules in this rocketship. 
 
-Leave the rocketship running and open another terminal. In the new terminal, run the following command. (Note we will discuss ROS nodes and topics in more detail in the next lecture)
+Leave the rocketship running and open another terminal. In that terminal, run the following command. (Note we will discuss ROS nodes and topics in more detail in the next lecture)
 
 ```bash
-# Start the Docker container
-$ docker-compose exec ros bash
 # List all the communication channels (ROS topics)
 $ rostopic list
 ```
@@ -336,13 +361,13 @@ Notice how these numbers match the numbers being printed by the rocketship softw
 Our rocketship code is reasonably simple, and keeping track of what is going on in our heads is manageable. 
 However, when you get to work on larger systems, it sometimes helps to **visualize the software modules and their communication** altogether. One way to do that is to use `rqt_graph`. `rqt_graph` provides a GUI plugin for visualizing the ROS computation graph made of topics and nodes. 
 
-While your rocketship is running, run the following command in a separate Docker container:
+Open another terminal and while your rocketship is running run the following command:
 
 ```bash
 $ rqt
 ```
 
-You will be presented with a blank GUI in your VNC browser (if not open, click [here](http://localhost:8080/vnc.html) and connect). In the GUI window, click `Plugins->Introspection->Node Graph`. Then change the first dropdown to Nodes/Topics (all) and uncheck the **hide deadsinks** and **hide leaf topics** as shown in the figure below:
+You will be presented with a blank GUI. Click `Plugins->Introspection->Node Graph`. Then change the first dropdown to Nodes/Topics (all) and **uncheck the hide deadsinks** and **hide leaf topics** as shown in the figure below:
 
 <div class="columns is-centered">
     <div class="column is-centered is-8">
@@ -372,7 +397,7 @@ Take a screenshot of the ROS communication graph.
 
 Previously we displayed data on the terminal using `rostopic echo`. For identifying data patterns or trends, sometimes if helps to visualize the data through plots.
 
-With the rocket running, start `rqt_plot` in a separate Docker container and check your VNC browser:
+With the rocket running, start `rqt_plot` in a new terminal:
 
 ```bash
 $ rqt
@@ -380,6 +405,8 @@ $ rqt
 
 To open `rqt_plot` click `Plugins->Visualization->Plot`. You will see output similar to the figure on the left. In the topic edit-box, type in `/cmd_vel` and hit the green + button. You will see a blue line, as shown in the right-hand figure. Use the magnifying glass to set the scale correctly and the arrows to locate the data being plotted.
 
+{% include notification.html 
+message="The mapping between your primary OS and your virtual OS is different for each machine, and thus you might have to use shift to right-click for some machines." %}
 
 <p> </p>
 
@@ -426,7 +453,7 @@ Answer the following question using the plot:
 # RQT Publisher
 
 The final tool we will inspect in this lab is `rqt_publisher`. `rqt_publisher` provides a GUI plugin for **sending arbitrary ROS messages to a channel** to any node that may be listening to that channel. 
-We will use this tool to control the abort function that is already implemented in our rocketship. You would have noticed (in the listed topics or in the rqt graph) that one of the communication channels (topics) the rocketship accepts is called `/launch_abort`. Let's use `rqt_publisher` to abort one of our launches. While your rocketship is running type the following into a separate Docker container:
+We will use this tool to control the abort function that is already implemented in our rocketship. You would have noticed (in the listed topics or in the rqt graph) that one of the communication channels (topics) the rocketship accepts is called `/launch_abort`. Let's use `rqt_publisher` to abort one of our launches. While your rocketship is running open a new terminal and type:
 
 ```bash
 $ rqt
@@ -460,11 +487,9 @@ We are going to send (publish) messages on that communication channel (topic) an
     </div>
 </div>
 
-You will notice that **nothing happens.** Let's investigate why. Open a new Docker container and display the content (ROS messages) of the communication channel (topic) using the following code:
+You will notice that **nothing happens.** Let's investigate why. Open a new terminal and display the content (ROS messages) of the communication channel (topic) using the following code.
 
 ```bash
-# Start the Docker container
-$ docker-compose exec ros bash
 $ rostopic echo /launch_abort
 >>> data: False
 >>> ---
@@ -499,8 +524,8 @@ Rerun the abort test before the rocket takes off. **Take a screenshot of the ter
 
 At the end of this lab, you should have the following:
 
-1. Have installed Docker and the necessary container
-    1. Launch the Docker container
+1. Have installed the virtual machine
+    1. Launch the virtual machine
     2. Run `roscore` in the terminal
 2. A screenshot of the ROS communication graph. Use this graph to answer:
     1. How many software modules (nodes) are there?
